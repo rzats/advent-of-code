@@ -1,5 +1,6 @@
 import os
 
+
 def main():
     filename = "input"
     absolute_filepath = os.path.join(os.path.dirname(__file__), filename)
@@ -7,7 +8,7 @@ def main():
     # Read input
     with open(absolute_filepath) as file:
         lines = [line.rstrip() for line in file]
-    
+
     # Calculate scores! ...if the strategy guide is followed
     score = 0
     for line in lines:
@@ -40,7 +41,7 @@ def main():
             score += 0
         else:
             score += 3
-        
+
     print(score)
 
     # Calculate scores! ...if you do a little cheating
@@ -84,7 +85,7 @@ def main():
         else:
             # winning to scissors -> must choose rock
             score += 1
-        
+
     print(score)
 
 

@@ -1,5 +1,6 @@
 import os
 
+
 def main():
     filename = "input"
     absolute_filepath = os.path.join(os.path.dirname(__file__), filename)
@@ -7,7 +8,7 @@ def main():
     # Read input
     with open(absolute_filepath) as file:
         lines = [line.rstrip() for line in file]
-    
+
     # Get single-rucksack priorities
     priority = 0
     for line in lines:
@@ -21,7 +22,7 @@ def main():
                 else:
                     priority += ord(c) - 38
                 break
-    
+
     print(priority)
 
     # Get three-rucksack priorities
@@ -35,7 +36,6 @@ def main():
                     priority += ord(c) - 38
                 break
     print(priority)
-
 
 
 if __name__ == "__main__":

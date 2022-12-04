@@ -1,5 +1,6 @@
 import os
 
+
 def main():
     filename = "input"
     absolute_filepath = os.path.join(os.path.dirname(__file__), filename)
@@ -7,7 +8,7 @@ def main():
     # Read input
     with open(absolute_filepath) as file:
         lines = [line.rstrip() for line in file]
-    
+
     # Build a list of elves
     elves = []
     current = 0
@@ -22,6 +23,7 @@ def main():
     # Get the three chonkiest elves :)
     elves.sort()
     print(elves[-3] + elves[-2] + elves[-1])
-    
+
+
 if __name__ == "__main__":
     main()
